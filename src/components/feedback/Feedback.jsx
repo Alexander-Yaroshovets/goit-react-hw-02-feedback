@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Statistics } from './Statistics';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Section } from './Section';
@@ -38,7 +37,7 @@ class Feedback extends React.Component {
           />
         </Section>
 
-        {good + bad + neutral > 0 ? (
+        {this.countTotalFeedback() > 0 ? (
           <Section title="Statistics">
             <Statistics
               good={good}
@@ -55,4 +54,5 @@ class Feedback extends React.Component {
     );
   }
 }
+
 export default Feedback;
